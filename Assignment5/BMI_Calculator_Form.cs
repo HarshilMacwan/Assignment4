@@ -32,8 +32,27 @@ namespace Assignment5
                 result =Convert.ToInt32( weight / (hight * hight));
 
             }
-            ResultBox.Text = result.ToString();
 
+            if (result <= 18.5)
+            {
+                ResultBox.Text = "Your BMI is:  " + result.ToString() +"\n You are underweight";
+
+            }
+            else if (result >= 18.5 && result<=24.9)
+            {
+                ResultBox.Text = "Your BMI is:  " + result.ToString() + "\n Your weight is normal ";
+
+            }
+            else if (result >=25 && result<=29.9)
+            {
+                ResultBox.Text = "Your BMI is:  " + result.ToString() + "\n You are Overweight";
+
+            }
+            else
+            {
+                ResultBox.Text = "Your BMI is:  " + result.ToString() + "\n You are Obese";
+
+            }
         }  
     }
 }
